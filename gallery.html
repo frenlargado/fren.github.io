@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Tabag's Place - Gallery</title>
+	
+	<link rel="stylesheet" href="gallery.css">
+	
+	<script src="https://kit.fontawesome.com/d32021a3d5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+			<nav class="navbar">
+				<div class="nav-links">
+				<ul>
+					<li><a  href="home.html"><b>HOME</b></a></li>
+					<li><a href="about us.html"><b>ABOUT US</b></a></li>
+					<li><a href="restaurant.html"><b>TABAG'S <br> RESTAURANT</b></a></li>
+					<li class="dropdown" ><a href="spots_view deck.html" class="dropdown-btn"><b>SPOTS</b></a>
+					<div class="dropdown-menu">
+					<ul>
+						<li><a href="spots_view deck.html"><b>VIEW DECK</b></a><li>
+						<li><a href="spots_falls.html"><b>FALLS</b></a><li>
+					</ul>
+					</div>
+					</li>
+					<li><a href="gallery.html"><b>GALLERY</b></a></li>
+					<li><a href="contact.html"><b>CONTACT</b></a></li>
+				</ul>
+				</div>
+			</nav>
+		<img src="Home/logo.png" class="logo">
+			
+<div class="banner-video">
+		<figure>
+		<div class="mySlides fade">
+		  <div class="numbertext">1 / 3</div>
+		  <img src="Gallery/1.jpeg" style="width:100%">
+		  
+		</div>
+
+		<div class="mySlides fade">
+		  <div class="numbertext">2 / 3</div>
+		  <img src="Gallery/picture_credit__Maricris Regis.jpg" style="width:100%">
+		  
+		</div>
+
+		<div class="mySlides fade">
+		  <div class="numbertext">3 / 3</div>
+		  <img src="Gallery/picture_credit__Elaver Photography_1.jpg" style="width:100%">
+		  
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+      	<div style="text-align:center">
+	 	<span class="dot"></span> 
+	  	<span class="dot"></span> 
+	  	<span class="dot"></span> 
+	</div>
+
+	</div>
+	
+	<script>
+	var slideIndex = 0;
+	showSlides();
+
+	function showSlides() {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("dot");
+	  for (i = 0; i < slides.length; i++) {
+	    slides[i].style.display = "none";  
+	  }
+	  slideIndex++;
+	  if (slideIndex > slides.length) {slideIndex = 1}    
+	  for (i = 0; i < dots.length; i++) {
+	    dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " active";
+	  setTimeout(showSlides, 5000); // Change image every 2 seconds
+	}
+	</script>
+	</figure>
+</div>
+
+<div id="camera">
+	<img src="Gallery/download.png">
+	<h1>GALLERY</h1>
+</div>
+
+<div class="row">
+	<div class="column">
+		<img class="img_thumbnail" src="Gallery/3.jpg">
+		<img class="img_thumbnail" src="Gallery/6.jpeg">
+		<img class="img_thumbnail" src="Gallery/5.jpg">
+	</div>
+	<div class="column">
+		<img class="img_thumbnail" src="Gallery/1.jpeg">
+		<img class="img_thumbnail" src="Gallery/2.jpeg" >
+		<img class="img_thumbnail" src="Gallery/picture_credit__Elaver Photography.jpg" >
+	</div>
+	<div class="column">
+		<img class="img_thumbnail" src="Gallery/picture_credit__Maricris Regis.jpg">
+		<img class="img_thumbnail" src="Gallery/picture_credit__Maricris Regis_1.jpg"> 
+		<img class="img_thumbnail" src="Gallery/picture_credit__Raza Stills & Motions.jpg"> 
+	</div>
+	<div class="column">
+		<img class="img_thumbnail" src="Gallery/4.jpeg" >
+		<img class="img_thumbnail" src="Gallery/picture_credit__Elaver Photography_1.jpg" >
+		<img class="img_thumbnail" src="Gallery/picture_credit__Raza Stills & Motions_1.jpg" >
+	</div>
+</div>
+
+
+<div class="modal">
+<span class="close">×</span>
+<img class="modalImage" id="img01">
+</div>
+
+<script>
+var modalEle = document.querySelector(".modal");
+var modalImage = document.querySelector(".modalImage");
+Array.from(document.querySelectorAll(".img_thumbnail")).forEach(item => {
+   item.addEventListener("click", event => {
+      modalEle.style.display = "block";
+      modalImage.src = event.target.src;
+   });
+});
+document.querySelector(".close").addEventListener("click", () => {
+   modalEle.style.display = "none";
+});
+</script>
+
+
+<footer id="footer">
+	<div class="footer content">
+	<ul class="social">
+		<li><a href="https://www.facebook.com/tabagsplacemalibago/?__tn__=%3C"><i class="fab fa-facebook fa-customize"></i></a></li>
+		<li>Follow us on Facebook</li>
+	</ul>
+	</div>
+	
+	<div class="footer-bottom">
+	<p>Copyright &copy; 2022 Tabag's Place</p>
+	<div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+#footer{
+	text-align: center;
+	background-color: #a97b46;
+	position: sticky;
+	margin-top:auto;
+	font-family: 'Jost', sans-serif;
+	padding: 20px;
+
+
+
+.social{
+	align-items: center;
+	justify-content:center;
+	
+}
+
+.social li{
+	align-items: center;
+	display: inline-block;
+	justify-content:center;
+	list-style: none;
+	color: #442706;
+}
+
+
+.footer-bottom{
+	font-size: 13px;
+	color: #442706;
+}
+
+.fab{
+	color:#442706;
+}
+
+.fa-customize{
+	font-size:25px;
+}
+
+
+<footer id="footer">
+	<div class="footer content">
+	<ul class="social">
+		<li><a href="https://www.facebook.com/tabagsplacemalibago/?__tn__=%3C"><i class="fab fa-facebook fa-customize"></i></a></li>
+		<li>Follow us on Facebook</li>
+	</ul>
+	</div>
+	
+	<div class="footer-bottom">
+	<p>Copyright &copy; 2022 Tabag's Place</p>
+	<div>
+</footer>
